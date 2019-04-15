@@ -171,7 +171,7 @@ public class CreateGame extends AppCompatActivity {
 
     public void update(String winner)
     {
-        if(databaseHelper.getPlayerNumber() ==)
+        if(databaseHelper.getPlayerNumber() ==1)
         gameStatus.setText(winner + " won");
         won = true;
     }
