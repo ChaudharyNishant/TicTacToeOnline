@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, CreateGame.class);
                 i.putExtra("NUMBER", databaseHelper.getGameNumber());
+                i.putExtra("CAME_FROM", "createGame");
                 startActivity(i);
             }
         });
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, JoinGame.class);
+                i.putExtra("NUMBER", databaseHelper.getGameNumber());
                 startActivity(i);
             }
         });

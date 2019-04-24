@@ -30,6 +30,7 @@ public class CreateGame extends AppCompatActivity {
     int n;
     DatabaseHelper databaseHelper;
     boolean won;
+    String cameFrom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,12 +55,32 @@ public class CreateGame extends AppCompatActivity {
         won = false;
         created = false;
         n = getIntent().getExtras().getInt("NUMBER");
+        cameFrom = getIntent().getExtras().getString("CAME_FROM");
         FirebaseApp.initializeApp(this);
         databaseReference = FirebaseDatabase.getInstance().getReference();
         if(n != -1)
         {
-            joined = 1;
-            databaseHelper.updatePlayer(n, 2);
+//            joined = 1;
+//            databaseHelper.updatePlayer(n, 2);
+            if(cameFrom.equals("createGame"))
+            {
+                databaseReference.child("test" + n).child("joined").setValue(0);
+                databaseReference.child("test" + n).child("k").setValue(1);
+                for (int i = 0; i < 3; i++)
+                    for (int j = 0; j < 3; j++)
+                        databaseReference.child("test" + n).child(String.valueOf(i)).child("a" + j).setValue(".");
+                n = -1;
+            }
+            else if(cameFrom.equals("joinGame"))
+            {
+//                databaseReference.child("test" + databaseHelper.getGameNumber()).child("joined").setValue(0);
+//                databaseReference.child("test" + databaseHelper.getGameNumber()).child("k").setValue(1);
+//                for (int i = 0; i < 3; i++)
+//                    for (int j = 0; j < 3; j++)
+//                        databaseReference.child("test" + databaseHelper.getGameNumber()).child(String.valueOf(i)).child("a" + j).setValue(".");
+                joined = 1;
+                databaseHelper.updatePlayer(n, 2);
+            }
         }
         for(int i = 0; i < 3; i++)
             for(int j = 0; j < 3; j++)
@@ -171,7 +192,7 @@ public class CreateGame extends AppCompatActivity {
 
     public void update(String winner)
     {
-        if(databaseHelper.getPlayerNumber() ==1)
+//        if(databaseHelper.getPlayerNumber() ==1)
         gameStatus.setText(winner + " won");
         won = true;
     }
