@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CreateGame"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/bg_starburst_blue_iphone">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -36,17 +37,20 @@
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a00"/>
+                android:id="@+id/a00"
+                android:background="@drawable/tile"/>
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a01"/>
+                android:id="@+id/a01"
+                android:background="@drawable/tile"/>
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a02"/>
+                android:id="@+id/a02"
+                android:background="@drawable/tile"/>
         </LinearLayout>
 
         <LinearLayout
@@ -57,17 +61,20 @@
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a10"/>
+                android:id="@+id/a10"
+                android:background="@drawable/tile"/>
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a11"/>
+                android:id="@+id/a11"
+                android:background="@drawable/tile"/>
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a12"/>
+                android:id="@+id/a12"
+                android:background="@drawable/tile"/>
         </LinearLayout>
 
         <LinearLayout
@@ -78,17 +85,20 @@
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a20"/>
+                android:id="@+id/a20"
+                android:background="@drawable/tile"/>
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a21"/>
+                android:id="@+id/a21"
+                android:background="@drawable/tile"/>
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/a22"/>
+                android:id="@+id/a22"
+                android:background="@drawable/tile"/>
         </LinearLayout>
     </LinearLayout>
 

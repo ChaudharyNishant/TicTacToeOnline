@@ -192,8 +192,21 @@ public class CreateGame extends AppCompatActivity {
 
     public void update(String winner)
     {
-//        if(databaseHelper.getPlayerNumber() ==1)
         gameStatus.setText(winner + " won");
+        if(databaseHelper.getPlayerNumber() == 1)
+        {
+            if(winner.equals("X"))
+                gameStatus.setText("You won");
+            else
+                gameStatus.setText("You lost");
+        }
+        else
+        {
+            if(winner.equals("O"))
+                gameStatus.setText("You won");
+            else
+                gameStatus.setText("You lost");
+        }
         won = true;
     }
 }
