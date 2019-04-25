@@ -1,6 +1,7 @@
 package com.nishant.tictactoeonline;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -116,7 +117,12 @@ public class CreateGame extends AppCompatActivity {
                     DataSnapshot data = dataSnapshot.child("test" + n).child(String.valueOf(i));
                     for(int j = 0; j < 3; j++)
                     {
-                        btn[i][j].setText("" + data.child("a" + j).getValue());
+                        String c = (String)data.child("a" + j).getValue();
+                        btn[i][j].setText(c);
+                        if(c.equals("O"))
+                            btn[i][j].setBackgroundResource(R.drawable.ball);
+                        else if(c.equals("X"))
+                            btn[i][j].setBackgroundResource(R.drawable.cross);
                         updateStatus();
                     }
                 }
@@ -153,6 +159,10 @@ public class CreateGame extends AppCompatActivity {
                             String c = (databaseHelper.getPlayerNumber() == 1) ? "X" : "O";
                             databaseReference.child("test" + n).child(String.valueOf(finalI)).child("a" + finalJ).setValue(c);
                             databaseReference.child("test" + n).child("k").setValue(k + 1);
+                            if(c.equals("O"))
+                                btn[finalI][finalJ].setBackgroundResource(R.drawable.ball);
+                            else if(c.equals("X"))
+                                btn[finalI][finalJ].setBackgroundResource(R.drawable.cross);
                         }
                     }
                 });

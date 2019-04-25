@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/*
+    TODO: Add background music and turn off auto rotation
+ */
+
+
 public class MainActivity extends AppCompatActivity {
 
     Button createGame;

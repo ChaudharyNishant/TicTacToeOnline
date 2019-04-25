@@ -21,7 +21,9 @@
             android:text="CREATE GAME"
             android:layout_marginBottom="30dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:padding="20dp"/>
+            android:padding="20dp"
+            android:fontFamily="casual"
+            android:background="@drawable/btn_border"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -29,7 +31,9 @@
             android:id="@+id/join_game_btn"
             android:text="JOIN GAME"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:padding="20dp"/>
+            android:padding="20dp"
+            android:fontFamily="casual"
+            android:background="@drawable/btn_border"/>
 
     </LinearLayout>
 
