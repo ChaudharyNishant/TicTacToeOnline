@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Tic Tac Toe Online</string>
+    <string name="join_game">JOIN GAME</string>
+    <string name="create_game">CREATE GAME</string>
+    <string name="loading">Loading…</string>
+    <string name="game_hash">Game #%1$d</string>
+    <string name="your_turn">Your turn</string>
+    <string name="opponent_turn">Opponent\'s turn</string>
+    <string name="you_won">You won</string>
+    <string name="you_lost">You lost</string>
+    <string name="zero_to_nine">0 to 9</string>
+    <string name="won">%1$s won</string>
 </resources>

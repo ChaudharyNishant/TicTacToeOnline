@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:gravity="center"
-    android:background="@drawable/bg_starburst_blue_iphone">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:background="@drawable/bg_starburst_blue_iphone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -18,23 +13,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/create_game_btn"
-            android:text="CREATE GAME"
+            android:text="@string/create_game"
             android:layout_marginBottom="30dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:padding="20dp"
             android:fontFamily="casual"
-            android:background="@drawable/btn_border"/>
+            android:background="@drawable/btn_border" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/join_game_btn"
-            android:text="JOIN GAME"
+            android:text="@string/join_game"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:padding="20dp"
             android:fontFamily="casual"
-            android:background="@drawable/btn_border"/>
+            android:background="@drawable/btn_border" />
 
     </LinearLayout>
-
-</RelativeLayout>

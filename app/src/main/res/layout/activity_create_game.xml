@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/game_number_tv"
-            android:fontFamily="casual"/>
+            android:fontFamily="casual" />
     </LinearLayout>
 
     <LinearLayout
@@ -32,82 +32,94 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarStyle">
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a00"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a01"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a02"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarStyle">
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a10"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a11"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a12"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarStyle">
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a20"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a21"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/a22"
                 android:background="@drawable/tile"
-                android:textColor="#00000000"/>
+                android:textColor="#00000000"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
     </LinearLayout>
 
@@ -119,10 +131,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Loading..."
+            android:text="@string/loading"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/game_status"
-            android:fontFamily="casual"/>
+            android:fontFamily="casual" />
     </LinearLayout>
 
 </LinearLayout>

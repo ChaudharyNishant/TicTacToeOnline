@@ -1,3 +1,10 @@
+/*
+    TODO 1: Get to know when there is no game available. There should not be infinite do while loop.
+    TODO 2: When one of the two players leave the game, the other player should somehow get to know and game should be freed.
+    TODO 3: First player should not be able to take his turn until second player joins.
+    TODO 4: When back is pressed from MainActivity or CreateGame, there should be confirmation before going back.
+ */
+
 package com.nishant.tictactoeonline;
 
 import android.content.Intent;
@@ -9,19 +16,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-/*
-    TODO: Add background music and turn off auto rotation
- */
-
-
 public class MainActivity extends AppCompatActivity {
 
-    Button createGame;
-    Button joinGame;
     DatabaseHelper databaseHelper;
+    Music music;
     MediaPlayer mediaPlayer;
     MediaPlayer btnPressed;
-    Music music;
+    Button createGame;
+    Button joinGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         finishAffinity();
         System.exit(0);
     }

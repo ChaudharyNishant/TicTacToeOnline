@@ -22,12 +22,12 @@ import com.google.firebase.database.ValueEventListener;
 
 public class JoinGame extends AppCompatActivity {
 
+    DatabaseReference databaseReference;
     EditText gameNumber;
     Button join;
     boolean gameStarted;
     boolean gameAvailable;
     long joined;
-    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,13 +64,10 @@ public class JoinGame extends AppCompatActivity {
                 final String str = gameNumber.getText().toString();
                 if(str.length() != 1)
                     Toast.makeText(JoinGame.this, "Game Number can be from 0 to 9", Toast.LENGTH_LONG).show();
-                else
-                {
+                else {
                     if(joined != 1)
-                        Toast.makeText(JoinGame.this, "Game " + gameNumber.getText() + " not available",
-                                Toast.LENGTH_LONG).show();
-                    else if(!gameStarted)
-                    {
+                        Toast.makeText(JoinGame.this, "Game " + gameNumber.getText() + " not available", Toast.LENGTH_LONG).show();
+                    else if(!gameStarted) {
                         gameStarted = true;
                         Music.mediaPlayer.pause();
                         Music.btnPressed.seekTo(0);
@@ -80,27 +77,6 @@ public class JoinGame extends AppCompatActivity {
                         i.putExtra("CAME_FROM", "joinGame");
                         startActivity(i);
                     }
-
-//                    databaseReference.addValueEventListener(new ValueEventListener() {
-//                        @Override
-//                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                            if((long)dataSnapshot.child("test" + gameNumber.getText().toString())
-//                                    .child("joined").getValue() != 1 && !gameStarted)
-//                                Toast.makeText(JoinGame.this, "Game not available", Toast.LENGTH_LONG).show();
-//                            else if(!gameStarted)
-//                            {
-//                                gameStarted = true;
-//                                Intent i = new Intent(JoinGame.this, CreateGame.class);
-//                                i.putExtra("NUMBER", Integer.parseInt(str));
-//                                startActivity(i);
-//                            }
-//                        }
-//
-//                        @Override
-//                        public void onCancelled(@NonNull DatabaseError databaseError) {
-//                            Log.e("Join Game", "error: " + databaseError);
-//                        }
-//                    });
                 }
             }
         });
@@ -125,8 +101,7 @@ public class JoinGame extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    void updateJoined()
-    {
+    void updateJoined() {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
