@@ -8,6 +8,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,6 +31,9 @@ public class JoinGame extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_game);
 
@@ -67,6 +72,9 @@ public class JoinGame extends AppCompatActivity {
                     else if(!gameStarted)
                     {
                         gameStarted = true;
+                        Music.mediaPlayer.pause();
+                        Music.btnPressed.seekTo(0);
+                        Music.btnPressed.start();
                         Intent i = new Intent(JoinGame.this, CreateGame.class);
                         i.putExtra("NUMBER", Integer.parseInt(str));
                         i.putExtra("CAME_FROM", "joinGame");
@@ -96,6 +104,25 @@ public class JoinGame extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Music.mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Music.mediaPlayer.pause();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Music.btnPressed.seekTo(0);
+        Music.btnPressed.start();
+        super.onBackPressed();
     }
 
     void updateJoined()
