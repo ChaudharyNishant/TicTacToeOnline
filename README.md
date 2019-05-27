@@ -6,7 +6,7 @@ The basic 0's and X's game. This is the online Player VS Player version.
 One of the player creates/generates a game which will have a Game Number, second player can join the game using this Game Number. Both the players proceed to play the game and after the game, new game can be generated.
 The application has a clean user interface with background music and button click sounds.
 
-Online and offline databases (Firbase and SQLite) are used for the smooth working of the game.
+Online and offline databases (Firebase and SQLite) are used for the smooth working of the game.
 <br><br>Latest Tic Tac Toe Online apk can be found <a href="https://github.com/ChaudharyNishant/TicTacToeOnline/releases">here</a>.
 <br><br><br><i>Kindly do not kill the app in between the game.
 As of now, 10 players can play the game at the same time, which can be increased further (only when more than 10 users use my application). Just in case, it needs to be increased, contact me and a new update will be pushed.</i>
