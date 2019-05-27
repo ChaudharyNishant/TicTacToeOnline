@@ -1,5 +1,5 @@
 <body>
-The basic 0's and X's game. This is the online Player VS Player version.
+The basic O's and X's game. This is the online Player VS Player version.
 <br><br>One of the player creates/generates a game which will have a Game Number, second player can join the game using this Game Number. Both the players proceed to play the game and after the game, new game can be generated.
 <br>The application has a clean user interface with background music and button click sounds.
 <br><br>Online and offline databases (Firebase and SQLite) are used for the smooth working of the game.
